@@ -1,5 +1,7 @@
 # linkedin-connect
 
+![CI](https://github.com/abisnar/linkedin-connect/actions/workflows/ci.yml/badge.svg)
+
 The hosted **"Connect LinkedIn to Claude"** login page for [linkedin-mcp](https://github.com/abisnar/linkedin-mcp).
 
 🔗 **https://abisnar.github.io/linkedin-connect/**

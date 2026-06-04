@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -79,6 +79,8 @@
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid var(--border);
       }
+      .btn-copy.block { margin-top: 0.6rem; }
+      .hint.spaced { margin-top: 1rem; }
       .code-box {
         margin-top: 0.5rem;
         display: flex;
@@ -146,10 +148,10 @@
         <label>Redirect URI (add this to your LinkedIn app's Authorized redirect URLs)</label>
         <div class="ro">
           <input id="redirectUri" type="text" readonly />
-          <button class="btn-copy" data-copy="redirectUri">Copy</button>
+          <button type="button" class="btn-copy" data-copy="redirectUri">Copy</button>
         </div>
 
-        <button id="loginBtn" class="btn-primary">Sign in with LinkedIn</button>
+        <button type="button" id="loginBtn" class="btn-primary">Sign in with LinkedIn</button>
       </section>
 
       <!-- Result after callback -->
@@ -157,16 +159,16 @@
         <label>Your one-time authorization code</label>
         <div class="code-box">
           <code id="codeOut"></code>
-          <button class="btn-copy" data-copy="codeOut">Copy</button>
+          <button type="button" class="btn-copy" data-copy="codeOut">Copy</button>
         </div>
 
         <div class="panel">
           <h2>Finish in Claude</h2>
           <p>Give Claude the code above and ask it to complete your LinkedIn login. It runs the <code>complete_auth</code> tool from the linkedin-mcp server, which exchanges the code locally (your client secret never leaves your machine).</p>
           <div class="ask" id="askText"></div>
-          <button class="btn-copy" data-copy="askText" style="margin-top:0.6rem">Copy prompt</button>
+          <button type="button" class="btn-copy block" data-copy="askText">Copy prompt</button>
         </div>
-        <p class="hint" style="margin-top:1rem">Done already? You can close this tab.</p>
+        <p class="hint spaced">Done already? You can close this tab.</p>
       </section>
 
       <div id="error" class="err hidden"></div>
